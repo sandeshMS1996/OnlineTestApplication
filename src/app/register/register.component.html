@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
+<div *ngIf="!isRegistered">
 <div class="card">
-  <form #formDetails = "ngForm" (ngSubmit)="onSubmit(formDetails.value)">
+  <form #formDetails = "ngForm" (ngSubmit)="onRegistration(formDetails.value)">
     <h1 class="card-header"> Please provide your details before taking the quiz</h1>
 
     <div class="form-group">
@@ -19,4 +19,25 @@
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="formDetails.form.invalid">Submit</button>
   </form>
+</div>
+</div>
+<div *ngIf="isRegistered">
+  <h1> Select the Topics on Which you want to take Quiz</h1>
+  <div *ngFor="let i of quiz">
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="card">
+      <h3 class="card-header">{{i.name}}</h3>
+      <div class="card-body">
+        <h3 class="card-title">Brief Description</h3>
+        <p class="card-text">{{i.description}}<br>
+          Number Of Questions: {{i.numberOfQuestions}}<br>
+          Passing Percentage: {{i.passingPercentage}}
+        </p>
+        <button class="btn btn-primary" (click)="onSubmit(i.name)">Start Quiz</button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
 </div>

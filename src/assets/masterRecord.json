@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Sports",
+    "description": "Quiz to test your knowledge on sports(Cricket, Tennis, FootBall)",
+    "numberOfQuestions": 5,
+    "PassingPercentage": 50
+  },
+  {
+    "name": "Politics",
+    "description": "Quiz to test your knowledge on Indian Polity",
+    "numberOfQuestions": 5,
+    "passingPercentage": 50
+  },
+
+  {
+    "name": "ForeignAffairs",
+    "description": "Quiz to test your knowledge on Foreign Affairs",
+    "numberOfQuestions": 5,
+    "PassingPercentage": 50
+  }
+
+]

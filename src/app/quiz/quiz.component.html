@@ -1,10 +1,55 @@
-<p>quiz works!</p>
-<div *ngIf="!isQuizStarted">
-<button (click)="startQuiz()">start</button>
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="d-flex justify-content-center row">
+  <div class="col-md-10 col-lg-10">
+    <div class="border">
+      <div class="question bg-white p-3 border-bottom">
+        <div class="d-flex flex-row justify-content-between align-items-center mcq">
+          <h4>{{file.split('.')[0].toUpperCase()}} Quiz</h4><span>({{NumberOfQuestionsAttended}} of {{questions.length}})</span>
+        </div>
+      </div>
+      <div class="question bg-white p-3 border-bottom">
+        <div class="d-flex flex-row align-items-center question-title">
+          <h3 class="text-danger">Q.</h3>
+          <h3 class="mt-1 ml-2">{{questionBeingAnswered.question}}?</h3>
+        </div>
+        <div class="ans ml-2">
+          <label class="radio">
+            <input type="radio" name="example" value="A" [(ngModel)]="selectedOption">
+            <span>{{questionBeingAnswered.option1}}</span>
+          </label>
+        </div>
+        <div class="ans ml-2">
+          <label class="radio"> <input type="radio" name="example" value="B" [(ngModel)]="selectedOption">
+            <span>{{questionBeingAnswered.option2}}</span>
+          </label>
+        </div>
+        <div class="ans ml-2">
+          <label class="radio">
+            <input type="radio" name="example" value="C" [(ngModel)]="selectedOption"> <span>{{questionBeingAnswered.option3}}</span>
+          </label>
+        </div>
+        <div class="ans ml-2">
+          <label class="radio">
+            <input type="radio" name="example" value="D" [(ngModel)]="selectedOption">
+            <span>{{questionBeingAnswered.option4}}</span>
+          </label>
+        </div>
+      </div>
+      <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+        <button class="btn btn-primary d-flex align-items-center btn-danger" type="button" (click)="moveBack()">
+          <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button>
+        <button class="btn btn-primary border-success align-items-center btn-success"
+                type="button" (click)="AnswerQuestion()">Next<i class="fa fa-angle-right ml-2"></i></button></div>
+    </div>
+  </div>
 </div>
+<!--
 <div class="container">
-<div *ngIf="isQuizStarted">
-  <h3> {{questionNumber +1}}.) {{questionBeingAnswered.question}}</h3>
+
+
+  <h2> {{questionNumber +1}}.) {{questionBeingAnswered.question}}</h2>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
            value="A" [(ngModel)]="selectedOption">
@@ -34,5 +79,6 @@
   </div>
   <button (click)="AnswerQuestion()" class="btn btn-primary">Submit</button>
 </div>
-</div>
+-->
+
 

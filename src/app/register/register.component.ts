@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {QuizServiceService} from '../quiz-service.service';
+import {MasterTestRecord} from './masterTestRecord';
 
 @Component({
   selector: 'app-register',
@@ -11,13 +13,20 @@ export class RegisterComponent implements OnInit {
     name:  '',
     email: ''
   };
-  constructor(private router: Router) { }
+  quiz: MasterTestRecord[] = [];
+  isRegistered = false;
+  constructor(private router: Router, private quizService: QuizServiceService) {
+  }
 
   ngOnInit(): void {
+    this.quizService.getMasterTestRecord().subscribe((resp: MasterTestRecord[]) => {
+      resp.forEach(a => this.quiz.push(a));
+    });
   }
   onSubmit(value: any): any {
-    console.log(value);
-    const promise = this.router.navigate(['/quiz']);
-    return promise;
+    this.router.navigate(['/quiz', 'test']);
+  }
+  onRegistration(value: any): any {
+    this.isRegistered = true;
   }
 }

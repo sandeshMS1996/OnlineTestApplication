@@ -3,15 +3,45 @@
   "option1": "Arun",
   "option2": "Basu",
   "option3": "Car",
+  "option4": "Dare",
   "correctAnswer": "A",
-  "userOption": null
+  "userEnteredAnswer": "z"
 },
 {
 "question": "what is your name: question2",
 "option1": "Anupama",
 "option2": "baraban",
 "option3": "Curanakar",
-"correct Answer": "a",
-"userOption": null
-}
+  "option4": "Dare",
+"correctAnswer": "a",
+"userEnteredAnswer": "z"
+},
+  {
+  "question": "what is your name: question3",
+  "option1": "Anupama",
+  "option2": "baraban",
+  "option3": "Curanakar",
+  "option4": "Dare",
+  "correctAnswer": "a",
+  "userEnteredAnswer": "z"
+  },
+  {
+    "question": "what is your name: question4",
+    "option1": "Anupama",
+    "option2": "baraban",
+    "option3": "Curanakar",
+    "option4": "Dare",
+    "correctAnswer": "a",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "what is your name: question5",
+    "option1": "Anupama",
+    "option2": "baraban",
+    "option3": "Curanakar",
+    "option4": "Dare",
+    "correctAnswer": "a",
+    "userEnteredAnswer": "z"
+  }
+
 ]

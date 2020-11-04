@@ -5,6 +5,6 @@ export interface Question {
   option3: string;
   option4: string;
   correctAnswer: string;
-  userEnteredQuestion: string;
+  userEnteredAnswer: string;
 
 }
