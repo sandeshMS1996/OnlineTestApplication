@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="card">
+  <form #formDetails = "ngForm" (ngSubmit)="onSubmit(formDetails.value)">
+    <h1 class="card-header"> Please provide your details before taking the quiz</h1>
+
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" required
+             class="form-check" name="email" [(ngModel)]="userDetails.email" #email=ngModel>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">Invalid Email
+        <div *ngIf="(email.touched && email.errors.required)">Email is required</div></div>
+    </div>
+
+    <div class="form-group">
+      <label>Full Name</label><br>
+      <input type="name" required minlength="5" name="name" [(ngModel)]="userDetails.name" #name=ngModel>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">Min Length 6
+        <div *ngIf="(name.touched && name.errors.required)">Name is required</div></div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formDetails.form.invalid">Submit</button>
+  </form>
+</div>

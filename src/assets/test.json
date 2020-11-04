@@ -1,0 +1,17 @@
+[{
+  "question": "what is your name: question1",
+  "option1": "Arun",
+  "option2": "Basu",
+  "option3": "Car",
+  "correctAnswer": "A",
+  "userOption": null
+},
+{
+"question": "what is your name: question2",
+"option1": "Anupama",
+"option2": "baraban",
+"option3": "Curanakar",
+"correct Answer": "a",
+"userOption": null
+}
+]

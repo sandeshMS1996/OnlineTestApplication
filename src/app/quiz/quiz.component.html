@@ -1,0 +1,38 @@
+<p>quiz works!</p>
+<div *ngIf="!isQuizStarted">
+<button (click)="startQuiz()">start</button>
+</div>
+<div class="container">
+<div *ngIf="isQuizStarted">
+  <h3> {{questionNumber +1}}.) {{questionBeingAnswered.question}}</h3>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+           value="A" [(ngModel)]="selectedOption">
+    <label class="form-check-label" for="exampleRadios4">
+      {{questionBeingAnswered.option1}}
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" value="B" id="exampleRadios3" [(ngModel)]="selectedOption">
+    <label class="form-check-label" for="exampleRadios3">
+      {{questionBeingAnswered.option2}}
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios"
+           id="exampleRadios1" value="C" [(ngModel)]="selectedOption">
+    <label class="form-check-label" for="exampleRadios1">
+      {{questionBeingAnswered.option3}}
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios"
+           id="exampleRadios2" value="D" [(ngModel)]="selectedOption">
+    <label class="form-check-label" for="exampleRadios2">
+      {{questionBeingAnswered.option4}}
+    </label>
+  </div>
+  <button (click)="AnswerQuestion()" class="btn btn-primary">Submit</button>
+</div>
+</div>
+
