@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Result} from '../quiz/Result';
 
 @Component({
   selector: 'app-result',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() result: Result = new Result();
+  constructor() {
+    console.log('calling Result constructor', this.result);
   }
 
+  ngOnInit(): void {
+
+  }
 }

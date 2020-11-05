@@ -19,8 +19,22 @@ export class QuizServiceService {
     const myUrl: string = 'assets/'.concat(fileName);
     return this.http.get<Question[]>(myUrl);
   }
+
   public getMasterTestRecord(): Observable<MasterTestRecord[]> {
     const records: MasterTestRecord[] = [];
     return this.http.get<MasterTestRecord[]>('/assets/masterRecord.json');
   }
+
+  /*public getMasterTetByName(quizName: string): MasterTestRecord {
+    console.log(quizName);
+    const records: MasterTestRecord[] = [];
+    this.http.get<MasterTestRecord[]>('/assets/masterRecord.json').subscribe(
+      (data: MasterTestRecord[]) => {
+        data.forEach(a => records.push(a));
+      });
+    console.log(records);
+    const masterTestRecords = records.filter(a => a.name === quizName);
+    console.log(masterTestRecords);
+    return masterTestRecords[0];
+  }*/
 }

@@ -22,6 +22,7 @@
 </div>
 </div>
 <div *ngIf="isRegistered">
+  <app-navbar [username]="userDetails.name"></app-navbar>
   <h1> Select the Topics on Which you want to take Quiz</h1>
   <div *ngFor="let i of quiz">
     <div class="row">

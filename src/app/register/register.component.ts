@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {QuizServiceService} from '../quiz-service.service';
 import {MasterTestRecord} from './masterTestRecord';
+import {InteractionsService} from '../interactions.service';
 
 @Component({
   selector: 'app-register',
@@ -13,9 +14,12 @@ export class RegisterComponent implements OnInit {
     name:  '',
     email: ''
   };
+  userName: string;
   quiz: MasterTestRecord[] = [];
   isRegistered = false;
-  constructor(private router: Router, private quizService: QuizServiceService) {
+  dataEminnter: EventEmitter<string> = new EventEmitter<string>();
+  constructor(private router: Router, private quizService: QuizServiceService,
+              private interactionService: InteractionsService) {
   }
 
   ngOnInit(): void {
@@ -24,9 +28,14 @@ export class RegisterComponent implements OnInit {
     });
   }
   onSubmit(value: any): any {
-    this.router.navigate(['/quiz', 'test']);
+    this.interactionService.sendName(this.userDetails.name);
+    console.log('passing data to navbar', this.userDetails.name);
+    this.router.navigate(['/quiz', 'test', {username: this.userDetails.name}]);
+
   }
   onRegistration(value: any): any {
+    this.dataEminnter.emit(this.userDetails.name);
     this.isRegistered = true;
+
   }
 }
