@@ -1,6 +1,26 @@
-<p>result works!</p>
-<h1>{{result.score}}</h1>
-<h1> name: {{result.quizMetaData.name}}</h1>
 
-<h1> numberOfQuestions: {{result.quizMetaData.numberOfQuestions}}</h1>
-<h1> passingPercentage:{{result.quizMetaData.passingPercentage}}</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Dear {{result.name}},</h1>
+    <div *ngIf="getResult()">
+      <img class="img-fluid" src="assets/pass.jpeg" alt="Card image cap">
+      <br>
+      <br>
+      <h3 class="display-4">Contracts, You have Passed the exam</h3>
+    </div>
+    <div *ngIf="!getResult()">
+      <img class="img-fluid" src="assets/fail.jpeg" alt="Card image cap">
+      <br>
+      <br>
+      <h1 class="display-4">You should score at least 50% to Pass the exam</h1>
+    </div>
+    <h1> Your have answered {{result.score}} questions correctly </h1>
+    <br>
+    <br>
+    <div class="progress">
+      <div [ngClass]="getResultClass()" role="progressbar" [style.width]="percentage.toString().concat('%')"
+           aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Your Score: {{percentage}}%</div>
+    </div>
+  </div>
+</div>
+

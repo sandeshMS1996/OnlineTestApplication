@@ -24,7 +24,6 @@ export class QuizServiceService {
     const records: MasterTestRecord[] = [];
     return this.http.get<MasterTestRecord[]>('/assets/masterRecord.json');
   }
-
   /*public getMasterTetByName(quizName: string): MasterTestRecord {
     console.log(quizName);
     const records: MasterTestRecord[] = [];

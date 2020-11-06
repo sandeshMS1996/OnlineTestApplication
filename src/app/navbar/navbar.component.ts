@@ -8,6 +8,7 @@ import {InteractionsService} from '../interactions.service';
 })
 export class NavbarComponent implements OnInit {
   @Input() username: string;
+  @Input() quizName: string;
   constructor(private interactionService: InteractionsService) {
     console.log('calling navbar constructor');
   }

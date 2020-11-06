@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(value: any): any {
     this.interactionService.sendName(this.userDetails.name);
     console.log('passing data to navbar', this.userDetails.name);
-    this.router.navigate(['/quiz', 'test', {username: this.userDetails.name}]);
+    this.router.navigate(['/quiz', value, {username: this.userDetails.name}]);
 
   }
   onRegistration(value: any): any {

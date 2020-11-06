@@ -3,4 +3,5 @@ export interface MasterTestRecord{
   description: string;
   numberOfQuestions: number;
   passingPercentage: number;
+  duration: number;
 }

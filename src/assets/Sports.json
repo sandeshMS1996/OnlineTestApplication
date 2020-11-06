@@ -1,0 +1,97 @@
+[
+  {
+    "question": "Omega Mission Hills World Cup is related to which game?\n",
+    "option1": "Tennis",
+    "option2": "Golf",
+    "option3": "Hockey",
+    "option4": "Polo",
+    "correctAnswer": "B",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "Velodrome is an arena for which among the following sporting events",
+    "option1": "Lawn tennis",
+    "option2": "Ice Hockey",
+    "option3": "Track Cycling",
+    "option4": "Formula 1 racing",
+    "correctAnswer": "C",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "What is the other name of Salt Lake Stadium ?",
+    "option1": "Yuba Bharti Stadium",
+    "option2": "Bharat Bharti Stadium",
+    "option3": "Eden Gardens",
+    "option4": "Kolkata Stadium",
+    "correctAnswer": "A",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "Which among the following is not a trophy or cup related to Hockey?",
+    "option1": "YGurmeet Trophy",
+    "option2": "Indira Gold Cup",
+    "option3": "Eden Gardens",
+    "option4": "Narang Cup",
+    "correctAnswer": "A",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "What is the other name of Sir Garfield Sobers Trophy?",
+    "option1": "ICC Cricketer of the Year Awards",
+    "option2": "ICC Test Captain of the Year",
+    "option3": "Spirit of the Cricket Awards",
+    "option4": "Test Player of the Year Award",
+    "correctAnswer": "A",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "WWho has designed the trophy of FIFA Women’s World Cup?",
+    "option1": "William Sawaya",
+    "option2": "Formiga",
+    "option3": "Marta",
+    "option4": "Sun Wen",
+    "correctAnswer": "A",
+    "userEnteredAnswer": "z"
+  },
+  {
+    "question": "WWith which sport is Seema Punia associated?",
+    "option1": "Javelin Throw",
+    "option2": "Discus Throw",
+    "option3": "Shot Put",
+    "option4": "Long Jump",
+    "correctAnswer": "B",
+    "userEnteredAnswer": "z"
+  },
+
+  {
+    "question": "The wood of a cricket bat is usually treated with a specific oil which serves a protective function. What is the name of the oil?",
+    "option1": "Coconut Oil",
+    "option2": "Sesame Oil",
+    "option3": "Til Oil",
+    "option4": "Linseed Oil",
+    "correctAnswer": "D",
+    "userEnteredAnswer": "z"
+  },
+
+  {
+    "question": "Who is the Chairperson of IOC Coordination Commission Beijing 2022?",
+    "option1": "Danka Bartekova",
+    "option2": "Ban Ki-moon",
+    "option3": "Ng Ser Miang",
+    "option4": "Juan Antonio Samaranch, Jr.",
+    "correctAnswer": "D",
+    "userEnteredAnswer": "z"
+  },
+
+  {
+    "question": "Who was the first President of IAAF?",
+    "option1": "Adriaan Paulen",
+    "option2": "Sigfrid Edstrom",
+    "option3": "Primo Nebiolo",
+    "option4": "Lamine Diack",
+    "correctAnswer": "B",
+    "userEnteredAnswer": "z"
+  }
+
+]
+

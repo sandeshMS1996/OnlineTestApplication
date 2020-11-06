@@ -1,10 +1,10 @@
-<app-navbar [username]="result1.name"></app-navbar>
+<app-navbar [username]="result1.name" [quizName]="file.split('.')[0]"></app-navbar>
 
 <div *ngIf="!submitAssessment">
 <br>
 <div class="container">
   <div class="d-flex flex-row justify-content-center">
-    <div class="btn btn-primary"></div>
+    <div [ngClass]="timerClass">{{countDown}}</div>
   </div>
 </div>
 <div class="progress">
