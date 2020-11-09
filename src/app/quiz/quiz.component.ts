@@ -104,7 +104,7 @@ export class QuizComponent implements OnInit {
 
   startTimer(): void {
     console.log(this.questions.length);
-    this.from  = new Date().getTime() + (1000 * 60 * 1);
+    this.from  = new Date().getTime() + (1000 * 60 * 10);
     const x =  setInterval(() => {
       const to = new Date().getTime();
       console.log(to, ' ', this.from) ;
